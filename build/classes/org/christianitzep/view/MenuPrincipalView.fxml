@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="501.0" styleClass="anchor-pane2" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.christianitzep.controller.MenuPrincipalController">
+   <children>
+      <Pane layoutX="162.0" layoutY="302.0" prefHeight="32.0" prefWidth="178.0" styleClass="pane3" />
+      <ImageView fitHeight="449.0" fitWidth="442.0" layoutX="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Menu.png" />
+         </image>
+      </ImageView>
+      <Pane layoutY="357.0" prefHeight="84.0" prefWidth="501.0" styleClass="pane2">
+         <children>
+            <Button layoutX="155.0" layoutY="30.0" mnemonicParsing="false" onAction="#ventanaLogin" prefHeight="32.0" prefWidth="178.0" styleClass="button3" text="Cerrar Sesión" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <MenuBar layoutX="-4.0" prefHeight="49.0" prefWidth="507.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresa" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Productos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="Tipo de Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo de Plato" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Tablas de Unión">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProductosHasPlatos" text="Productos has Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServiciosHasPlatos" text="Servicios has Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServiciosHasEmpleados" text="Servicios has Empleados" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Carta de Menú">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cartaMenu" text="Menú" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="?">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

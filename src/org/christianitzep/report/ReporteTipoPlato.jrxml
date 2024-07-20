@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteProducto" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="da468849-e43a-4704-9988-abab8896182b">
+	<property name="ireport.zoom" value="0.8264462809917478"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="324"/>
+	<subDataset name="dataset1" uuid="4c6ce844-ddc0-4a9a-a410-40084d89ed17"/>
+	<parameter name="imagen" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[call sp_ListarTipoPlatos;]]>
+	</queryString>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="752" backcolor="#3300FF" uuid="6e86c433-8063-440a-b125-f52f9a731ea5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="107" width="572" height="560" backcolor="#FFFFFF" uuid="e9e25df8-8988-4256-872d-9e9c75fc2dc0"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<image>
+				<reportElement x="34" y="107" width="508" height="560" uuid="12f54220-5e63-4d42-9d51-4380fed6458a"/>
+				<imageExpression><![CDATA[$P{imagen}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="129" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="17" width="570" height="84" backcolor="#FF6600" uuid="f0a7db71-a82b-4b21-834f-b0754865b2cb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="54" isBold="true" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Tipos de Platos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<line>
+				<reportElement x="110" y="60" width="383" height="1" uuid="d3493789-bf0e-4bf2-9202-ff0c98b52a0b"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="127" y="40" width="126" height="20" uuid="f8c47e1c-b0bd-4140-a276-b68f4c7a1f2b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Tipo Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="40" width="100" height="20" uuid="a7932f14-a131-4fa8-b7b3-9925b8a1092f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement x="110" y="20" width="383" height="1" uuid="99ccf7d9-a4e7-4443-a58b-65a3b36a931e"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="253" y="1" width="1" height="20" uuid="ce13ced5-9466-4c60-a457-858a9d2d20d2"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="142" y="1" width="100" height="20" uuid="f200d33b-43c5-49c0-9740-3b2e90387a72"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoTipoPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="1" width="126" height="20" uuid="efcebe48-b6ff-4d0b-895b-fe747f09b80d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcionTipo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="418" y="17" width="152" height="20" uuid="066d5113-b597-48b5-b270-4963669cb1d4"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Un Sabor Inolvidable!]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

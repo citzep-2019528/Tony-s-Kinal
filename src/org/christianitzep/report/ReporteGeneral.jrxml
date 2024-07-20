@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteGeneral" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="46fabde6-a422-4be6-8706-a94fae79bf19">
+	<property name="ireport.zoom" value="0.6830134553650722"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="374"/>
+	<parameter name="codEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ImageLogo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[call sp_ReporteGeneral($P{codEmpresa});]]>
+	</queryString>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadPresupuesto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="555" backcolor="#3300FF" uuid="c834e8bc-a2f1-4059-8f2f-04c53a3a24a2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="97" width="802" height="363" uuid="aa8561eb-9518-466e-beaf-d4472d744dbd"/>
+			</rectangle>
+			<image>
+				<reportElement x="196" y="97" width="445" height="363" uuid="a5db7f0f-d494-4f64-b78a-61c50311286f"/>
+				<imageExpression><![CDATA[$P{ImageLogo}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement x="147" y="0" width="514" height="116" uuid="1e5a9c9a-3272-4093-ab1f-8c47dfdde90c"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="60" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte General]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="154" height="20" uuid="a9dfdc10-658d-4238-81d3-8c39d382089c"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="13" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Nombre de la Empresa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="0" width="75" height="20" uuid="e7b3194e-36f4-445a-99fd-4ca4d151813c"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="13" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="154" y="3" width="100" height="20" uuid="6280826f-ddfd-4c42-8f29-4cc7d73933b2"/>
+				<textElement textAlignment="Left">
+					<font fontName="Comic Sans MS" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="613" y="0" width="93" height="20" uuid="94fe797d-e1c2-4edb-9e2d-253bdf48fcd9"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="13" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Presupuesto:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="329" y="3" width="274" height="20" uuid="3b55029a-765b-411e-aa17-76e69584d040"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="706" y="3" width="96" height="20" uuid="e67f6fae-2473-4e80-b6a3-6edd610c3c25"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidadPresupuesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="51" width="100" height="20" uuid="3ab64bb0-1ac5-415d-b71e-de7df8be3207"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="51" width="109" height="20" uuid="75f7e751-c5a2-46da-98ad-25ce83639b35"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="13" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tipo de Servicio:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="d18fb610-afb1-4c41-a108-4a028dca139e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No.Empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="77cdda8c-2dad-4723-baae-6fa31ca7701a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="0" width="100" height="20" uuid="d1fc31ad-27c1-483a-b306-77e2e264eb52"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="0" width="83" height="20" uuid="095b3d62-d613-4373-8bc7-247a8d80df95"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Puesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="0" width="70" height="20" uuid="53327ddd-2424-4dc1-9295-88a420fa7c74"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="0" width="113" height="20" uuid="269f802d-c57e-4811-9d86-f6f520e47575"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad de Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="641" y="0" width="80" height="20" uuid="ebd354c6-b007-430a-8d36-41c6b334a877"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="725" y="0" width="70" height="20" uuid="cb971338-88b3-4529-a58e-4c59af142ecb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<line>
+				<reportElement x="5" y="30" width="790" height="1" uuid="3b2b2853-dc9f-446b-9ca8-265cd3209fd5"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="90" height="20" uuid="35b1d866-45e0-4046-8ea7-b2b855bf78ab"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="a1f792e5-89bf-4658-a4e5-7c7e8218d48d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidosEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="0" width="100" height="20" uuid="bc5ac8b4-5bb8-4357-bc18-c05228f88239"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombresEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="0" width="83" height="20" uuid="b6b2f8c9-0b60-4ec8-a364-1002cb30a0fa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="0" width="86" height="20" uuid="104a8e00-c1a0-488c-b30f-7865132a8911"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombrePlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="526" y="0" width="77" height="20" uuid="d903b466-4a09-411a-92c1-406f835ca736"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidadPlato}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="641" y="0" width="80" height="20" uuid="dd0dbe66-feb1-40bc-90d2-7ca77474d6c2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{precioPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="732" y="0" width="70" height="20" uuid="9d4a1c70-55c5-4774-833d-ae9df8fe4338"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcionTipo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="5" y="25" width="790" height="1" uuid="29e0bec4-2a1c-4207-9b6d-e35daf53dfef"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="90" y="1" width="1" height="25" uuid="fb5f3d7a-9098-424b-99ee-9502cd1c07d2"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="205" y="1" width="1" height="25" uuid="260e4d6d-599e-41af-b977-61eab48e6134"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="318" y="3" width="1" height="25" uuid="95008c4c-9a8b-4215-b66d-237d87e96a5f"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="419" y="0" width="1" height="25" uuid="cf080a17-2913-4f32-8398-ffa80bfe9546"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="515" y="0" width="1" height="25" uuid="55468417-aa02-48da-8cf1-a7f072e7d054"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="724" y="0" width="1" height="25" uuid="9555f89c-bf67-4a78-b0ef-3b8fce03a925"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="635" y="1" width="1" height="25" uuid="8f6662b1-3989-4fcc-ab01-05f14ea954cd"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="87" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="650" y="16" width="152" height="20" uuid="13057951-b5aa-4fe1-a712-a9be59e0e6fb"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Un Sabor Inolvidable!]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
